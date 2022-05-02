@@ -8,5 +8,4 @@ __pycache__
 .bash_history
 .env
 logs
-uploads
 database
