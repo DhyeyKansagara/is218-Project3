@@ -20,6 +20,8 @@ def application():
 
     application = create_app()
 
+    application.config['WTF_CSRF_ENABLED'] = False
+
     with application.app_context():
         db.create_all()
         yield application
@@ -31,7 +33,7 @@ def application():
 def add_user(application):
     with application.app_context():
         #new record
-        user = User('keith@webizly.com', 'testtest')
+        user = User('dhyey@test.com', 'dhyeytest')
         db.session.add(user)
         db.session.commit()
 
