@@ -25,3 +25,7 @@ def welcome():
         return render_template('welcome.html')
     except TemplateNotFound:
         abort(404)
+
+if __name__ == '__main__':
+    log = logging.getLogger("__main__")
+    log.DEBUG('method:{}, route:{}, time:{}, request address{}')
